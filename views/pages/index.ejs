@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href="style.css">
+  <title>
+      my project
+  </title>
+</head>
+<body>
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+<main>
+<form>
+     <select id="item_book" onchange="change_item_book(this.value)">
+        <option value="all" id="all">All Books</option>
+        <option value="it"  id="it" >IT</option>
+        <option value="physics" id="physics" >Physics</option>
+        <option value="chemistry" id="chemistry">Chemistry</option>
+    </select>
+    <div>
+        <input type="button" id="filter" value="filter" onclick="myfunction()">
+    </div>
+    <div  class="container">
+        <form action="/views/pages/details.ejs" method="POST">
+        <div class=books>
+            <img src="images/pic3.jpg">
+            <p>The Physics Book: Big Ideas Simply Explained</p>
+            <input type="button" id="physics" value="Details">
+        </div>
+        <div class="books it">
+            <img src="images/pic1.jpg">
+            <p>JavaScript: The Definitive Guide</p>
+            <input type="button" id="it" value="Details">
+        </div>
+        <div class="books chemistry">
+            <img src="images/pic4.jpg">
+            <p>MCAT Organic Chemistry Review 2020-2021</p>
+            <input type="button" id="chemistry" value="Details">
+        </div>
+        <div class="books it">
+            <img src="images/pic2.jpg">
+            <p>The HTML and CSS Workshop</p>
+            <input type="button" id="it" value="Details">
+        </div>
+    </form>
+    </div>
+
+</form>
+</main>
+</body>
+<script src="books.js" src="app.js"></script>
+</html>

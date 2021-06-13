@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href="style.css">
+  <title>
+      Details
+  </title>
+    <style>
+      .details{
+        margin-top: 100px;
+        display: inline;
+      }
+      img{
+        padding-top: 150px;
+        width: 300px;
+        height: 600px;
+      }
+
+      .object{
+        padding-top: -150px;
+        padding-left: 397px;
+        box-sizing: content-box;
+      }
+      
+  </style>
+</head>
+<body>
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+<div class="details">
+    <% booksDp.forEach(function(booksDp) { %>
+        <div>
+            <img src="images/pic3.jpg"/>
+            <div class="object">
+              <strong>Title: </strong><%= booksDp.name %><br>
+              <strong>Description: </strong> <%= booksDp.category %><br>
+              <strong> Price: </strong><%= booksDp.price %>
+              <% }); %>
+              </div>
+        </div>
+
+       <div class=form1>
+        <input type="number" id="quantity" name="quantity" value="Quantity">
+        <button type="button">Buy</button>
+        </div>
+</div>
+</body>
+<script src=app.js></script>
+</html>
